@@ -27,5 +27,15 @@ class Stack {
             top--;
         }
     }
+    /** reverse the element in the stack */
+    reverse() {
+       this._reverse(this.top - 1);
+    }
+    _reverse(index) {
+        if(index != 0) {
+           this._reverse(index-1);
+        }
+        console.log(this.data[index]);
+     }
 }
 module.exports = new Stack();
