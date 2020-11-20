@@ -5,3 +5,4 @@ let readlineSync = require('readline-sync');
  */
 let element = readlineSync.question("Enter push Integer:");
 Utility.push(element);
+Utility.pop();
