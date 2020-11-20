@@ -6,7 +6,7 @@ choice = function () {
     let isTerminated = true;
     while (isTerminated == true) {
         /** take choice input from the user */
-        let choice = readlineSync.question("\nEner your choice:\n1.push\n2.pop\n3.print\n4.reverse\n5.peekElement\n6.exit\n");
+        let choice = readlineSync.question("\nEner your choice:\n1.push\n2.pop\n3.print\n4.reverse\n5.peekElement\n6.lengthElement\n7.exit\n");
         switch (choice) {
             case '1':
                 let element = readlineSync.question("Enter the element:");
@@ -24,7 +24,12 @@ choice = function () {
             case '5':
                 let peekElement = Utility.peek();
                 console.log(peekElement);
+                break;
             case '6':
+                let stackLength = Utility.length();
+                console.log(stackLength);
+                break;
+            case '7':
                 isTerminated = false;
                 break;
             default: console.log("please enter correct option");

@@ -16,13 +16,13 @@ class Stack {
     pop = () => {
         if (this.isEmpty() === false) {
             this.top = this.top - 1;
-            return this.data.pop(); // removes the last element
+            return this.data.pop(); // return the last element
         }
     }
     /**method for display the element */
     print = () => {
-        let top = this.top - 1; // because top points to index where new element to be inserted
-        while (top >= 0) { // print upto 0th index
+        let top = this.top - 1;
+        while (top >= 0) { 
             console.log(this.data[top]);
             top--;
         }
@@ -37,9 +37,13 @@ class Stack {
         }
         console.log(this.data[index]);
      }
-     /** method for find the peek element of queue */
+     /** method for find the peek element of stack */
      peek = () => {
         return this.data[this.top-1];
+     }
+     /**method for find the length of stack */
+     length = () => {
+        return this.top;
      }
 }
 module.exports = new Stack();
