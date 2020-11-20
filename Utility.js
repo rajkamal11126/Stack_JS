@@ -37,5 +37,9 @@ class Stack {
         }
         console.log(this.data[index]);
      }
+     /** method for find the peek element of queue */
+     peek = () => {
+        return this.data[this.top-1];
+     }
 }
 module.exports = new Stack();
